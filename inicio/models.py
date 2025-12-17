@@ -4,6 +4,7 @@ from django.db import models
 class Perro(models.Model):
     raza = models.CharField(max_length=30)
     tamaño = models.CharField(max_length=30)
+    imagen = models.ImageField(upload_to='perros', null=True, blank=True)
     
     def __str__(self):
         return f'Perro ({self.id}): {self.raza} - {self.tamaño}'

@@ -21,11 +21,11 @@ def otra(request):
 def comprar_perro(request, raza=None, tamaño=None):
     perro = None
     if request.method == 'POST':
-        formulario = ComprarPerro(request.POST)
+        formulario = ComprarPerro(request.POST, request.FILES)
         if formulario.is_valid():
             info = formulario.cleaned_data
 
-            perro = Perro(raza=info.get("raza"), tamaño=info.get("tamaño"))
+            perro = Perro(raza=info.get("raza"), tamaño=info.get("tamaño"), imagen=info.get("imagen"))
             perro.save()
             return redirect('listar')
     else:

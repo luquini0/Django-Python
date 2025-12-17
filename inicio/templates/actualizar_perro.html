@@ -4,7 +4,7 @@
 {% block contenido %}
 <h1>Actualizar Información del Perro</h1>
 
-<form action="{% url 'actualizar' perro.id %}" method="POST">
+<form action="{% url 'actualizar' perro.id %}" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Actualizar">

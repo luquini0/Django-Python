@@ -9,6 +9,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('inicio.urls')),
     path('usuarios/', include('usuarios.urls')),
+    
 
     # path('admin/', admin.site.urls),
     # path('', inicio, name='inicio'),

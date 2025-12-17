@@ -4,5 +4,8 @@
   <h1>Detalles del Perro</h1>
   <p>Raza: {{ perro.raza }}</p>
   <p>Tamaño: {{ perro.tamaño }}</p>
+  {% if perro.imagen %}
+  <p><img src="{{ perro.imagen.url }}" alt="Imagen de {{ perro.raza }}" width="300"></p>
+  {% endif %}
   <a href="{% url 'listar' %}">Volver a la lista</a>
 {% endblock contenido %}

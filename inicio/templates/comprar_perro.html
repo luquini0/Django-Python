@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}<title>Comprar Perro</title>{% endblock title %}
 {% block contenido %}
-  <form action="{% url 'comprar' %}" method="POST">
+  <form action="{% url 'comprar' %}" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{formulario}}
     <!-- <label for="raza">Raza:</label>
