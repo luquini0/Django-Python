@@ -25,7 +25,7 @@ Permite registrar, listar y gestionar perros mediante vistas y templates.
 
 Clonar el repositorio y ubicarse en la carpeta del proyecto:
 
-git clone https://github.com/luquini0/Python-Django.git
+git clone https://github.com/luquini0/Django-Python.git
 cd Python-Django
 
 Crear y activar entorno virtual:
