@@ -89,3 +89,9 @@ class EliminarPerro(LoginRequiredMixin, DeleteView):
     template_name = 'eliminar_perro.html'
     fields = '__all__' # para que aparezcan todos los campos del modelo
     success_url = reverse_lazy('listar')
+
+
+from django.shortcuts import render
+
+def about(request):
+    return render(request, "about.html")

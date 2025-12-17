@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from inicio.views import inicio, otra, comprar_perro, listar_perros, ver_perro, ActualizarPerro, EliminarPerro
+from inicio.views import inicio, otra, comprar_perro, listar_perros, ver_perro, ActualizarPerro, EliminarPerro, about
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -11,5 +11,6 @@ urlpatterns = [
     path('eliminar_perro/<pk>/', EliminarPerro.as_view(), name='eliminar'),
     path('comprar-perro/', comprar_perro, name='comprar'),
     path('listar-perros/', listar_perros, name='listar'),
+    path('about/', about, name='about'),
 
 ]
