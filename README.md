@@ -5,6 +5,12 @@ Permite registrar, listar y gestionar perros mediante vistas y templates.
 
 ---
 
+# Video How/To
+
+https://youtu.be/Fwevvv4XyW4
+
+---
+
 ## Funcionalidades
 - Registrar perros
 - Listar perros
