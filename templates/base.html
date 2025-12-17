@@ -126,6 +126,7 @@
             <a href="{% url 'listar' %}">Listar Perros</a>
             <a href="{% url 'about' %}">About</a>
 
+
             <div class="right">
                 {% if request.user.is_authenticated %}
                     <span>{{ request.user }}</span>

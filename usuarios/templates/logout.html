@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block title %}<title>Logout</title>{% endblock title %}
 {% block contenido %}
+<div class="card">
+  <h1>Sesión cerrada</h1>
   <p>Has cerrado sesión correctamente.</p>
-  <a href="{% url 'inicio' %}">Volver al inicio</a>
+  <a class="btn" href="{% url 'inicio' %}">Volver al inicio</a>
+</div>
 {% endblock contenido %}
-
-
-

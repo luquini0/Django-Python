@@ -1,15 +1,13 @@
 {% extends "base.html" %}
 {% block title %}<title>Login</title>{% endblock title %}
 {% block contenido %}
-  <form action="{% url 'login' %}" method="POST">
+<div class="card">
+  <h1>Iniciar sesión</h1>
+  <form method="POST">
     {% csrf_token %}
-    {{formulario.as_p}}
+    {{ formulario.as_p }}
     <input type="submit" value="Login">
-    
   </form>
-
-  <a href="{% url 'inicio' %}">Volver al inicio</a>
+  <a class="btn" href="{% url 'inicio' %}">Volver</a>
+</div>
 {% endblock contenido %}
-
-
-

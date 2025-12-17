@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 {% block title %}<title>Ver Perro</title>{% endblock title %}
 {% block contenido %}
-  <h1>Detalles del Perro</h1>
-  <p>Raza: {{ perro.raza }}</p>
-  <p>Tamaño: {{ perro.tamaño }}</p>
+<div class="card">
+  <h1>{{ perro.raza }}</h1>
+  <p><strong>Tamaño:</strong> {{ perro.tamaño }}</p>
+
   {% if perro.imagen %}
-  <p><img src="{{ perro.imagen.url }}" alt="Imagen de {{ perro.raza }}" width="300"></p>
+  <img src="{{ perro.imagen.url }}" style="max-width:100%; border-radius:12px;">
   {% endif %}
-  <a href="{% url 'listar' %}">Volver a la lista</a>
+
+  <br><br>
+  <a class="btn" href="{% url 'listar' %}">Volver</a>
+</div>
 {% endblock contenido %}

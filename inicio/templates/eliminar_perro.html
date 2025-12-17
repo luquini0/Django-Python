@@ -1,11 +1,12 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% block title %}<title>Eliminar Perro</title>{% endblock title %}
 {% block contenido %}
-  <h1>Eliminar Perro</h1>
-  <form action="{% url 'eliminar' perro.id %}" method="POST">
+<div class="card">
+  <h1>Eliminar perro</h1>
+  <p>¿Estás seguro?</p>
+  <form method="POST">
     {% csrf_token %}
-    <p>¿Estás seguro de que deseas eliminar este perro?</p>
     <input type="submit" value="Eliminar">
   </form>
-  <a href="{% url 'listar' %}">Volver a la lista</a>
+</div>
 {% endblock contenido %}
